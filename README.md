@@ -6,8 +6,8 @@ The custom controller is designed in:
 
 - Ubuntu 22.04
 - ROS2 Humble
-- Gazebo 11
-- Xarco-ROS-Humble (sudo apt install ros-humble-xacro)
+- Mission Planner
+- Mavlink 1.0
 
 Follow these commands to install the package:
 
