@@ -27,7 +27,7 @@ $ cd ~/dev_ws
 $ colcon build
 ```
 # Contents
-Please follow the PDF instructions to setup the drone and after that, run this code:
+Please follow the PDF instructions to set up the drone and after that, run this code:
 
 ## a. **PID controller:**   
 
