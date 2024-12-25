@@ -31,7 +31,7 @@ Please follow the PDF instructions to set up the drone and after that, run this 
 
 ## a. **PID controller:**   
 
-Follow these commands in order to run the flying mode:
+Follow these commands in order to fly the drone:
 
 ```
 # get the data
@@ -43,7 +43,7 @@ ros2 run ahsmcquad cascadedpositionpid
 
 ## b. **AHSMC controller:**   
 
-Follow these commands in order to run the flying mode:
+Follow these commands in order to fly the drone:
 
 ```
 # get the data
