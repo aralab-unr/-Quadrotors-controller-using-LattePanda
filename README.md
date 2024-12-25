@@ -20,28 +20,24 @@ $ echo "source ~/dev_ws/devel/setup.bash" >> ~/.bashrc
 
 # Step 2: Clone this repo into your workspace
 $ cd ~/dev_ws/src
-$ git clone --recursive https://github.com/aralab-unr/AHSMC_EKF-for-Quadrotors-UAVs-on-Gazebo-ROS-2.git
+Download the ahsmcquad folder
 
-# Step 3: Build the catkin workspace for this package
+# Step 3: Build the colcon workspace for this package
 $ cd ~/dev_ws
 $ colcon build
 ```
-This project uses a custom plugin. Users need to update the plugin path in the file /urdf/uav_drone.urdf.xacro at line 268. Replace: filename="/home/vanchung/dev_ws/install/ahsmcekf/lib/ahsmcekf/libuavplugin.so" with the correct path by changing vanchung to the name of your computer. Then rebuild the project again to run the simulation.
-
 # Contents
-This section shows how to run the simulation and the results of the **PID controller**, **AHSMC controller**:
+Please follow the PDF instructions to setup the drone and after that, run this code:
 
 ## a. **PID controller:**   
 
 Follow these commands in order to run the flying mode:
 
 ```
-# run ros model
-ros2 launch ahsmcekf model.launch.py
+# get the data
+ros2 run ahsmcquad getdata
 # start the EKF
-ros2 run ahsmcekf EKFnode
-# start the PID controller
-ros2 run ahsmcekf pidcontroller
+ros2 run ahsmcquad cascadedpositionpid
 ```
 
 
@@ -50,12 +46,10 @@ ros2 run ahsmcekf pidcontroller
 Follow these commands in order to run the flying mode:
 
 ```
-# run ros model
-ros2 launch ahsmcekf model.launch.py
+# get the data
+ros2 run ahsmcquad getdata
 # start the EKF
-ros2 run ahsmcekf EKFnode
-# start the PID controller
-ros2 run ahsmcekf ahsmc
+ros2 run ahsmcquad hsmcposition
 ```
 
 
