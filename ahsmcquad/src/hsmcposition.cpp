@@ -333,7 +333,7 @@ private:
         double s3 = lam2 * lam1 * sx + lam2 * sy + sz;
         double sats3 = clamp(s3, -0.25, 0.25);
 
-        double usw = (lam2 * lam1 * bx * (ueqy + ueqz) + lam2 * by * (ueqx + ueqz) + bz * (ueqx + ueqy) + Ka * s3 + eta * sats3) / (lam2 * lam1 * bx + lam2 * by + bz);
+        double usw = -(lam2 * lam1 * bx * (ueqy + ueqz) + lam2 * by * (ueqx + ueqz) + bz * (ueqx + ueqy) - Ka * s3 - eta * sats3) / (lam2 * lam1 * bx + lam2 * by + bz);
         double Uz = ueqx + ueqy + ueqz + usw;
 
         double U1 = clamp(Uz, 12.5, 25.0);
